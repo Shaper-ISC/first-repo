@@ -1,9 +1,9 @@
 import random
 
-print ("угадай число")
-print ("введи от 1 до 20")
+print ("Сколько у тебя хуёв было в жопе")
+print ("введи от 1 до 100")
 
-secret_number = random.randint(1, 20)
+secret_number = random.randint(1, 100)
 attempts = 0
 
 while True:
@@ -11,10 +11,10 @@ while True:
     attempts +=1
 
     if user_guess < secret_number:
-        print ("мало")
+        print ("иди нахуй, мало")
     elif user_guess > secret_number:
-        print ("много")
+        print ("иди нахуй, много")
     else:
         print (f"ладно, не иди нахуй, угадал: {secret_number}")
-        print (f"ты пошел нахуй столько раз: {attempts}")
+        print (f"ты cходил нахуй {attempts} раз")
         break
