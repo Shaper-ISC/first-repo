@@ -45,26 +45,30 @@ int even(int numbrs[], int count){
     return e;
 }
 
-int middle(int numbrs[], int count){
-    int mid = 0;
-    mid = sum(numbrs, count) / count;
+float middle(int numbrs[], int count){
+    float mid = 0;
+    mid = (float)sum(numbrs, count) / count;
     return mid;
+}
+//Вывод//
+void output(int numbrs[], int count){
+    printf("Сумма: %d\n", sum(numbrs, count));
+    printf("Максимум: %d\n", maximum(numbrs, count));
+    printf("Минимум: %d\n", minumum(numbrs, count));
+    printf("Среднее: %.1f\n", middle(numbrs, count));
+    printf("Количество четных: %d\n", even(numbrs, count));
 }
 //Основа//
 int main() {
 int numbrs[5]; int count = 0;
 //Ввод//
-for (int i = 0; i < 5; i++, count++)
+    for (int i = 0; i < 5; i++, count++)
 {
     printf("Введите %d-е чиcло: ", count+1);
     scanf("%d", &numbrs[i]);
 }
 //вывод//
-printf("Сумма: %d\n", sum(numbrs, count));
-printf("Максимум: %d\n", maximum(numbrs, count));
-printf("Минимум: %d\n", minumum(numbrs, count));
-printf("Среднее: %d\n", middle(numbrs, count));
-printf("Количество четных: %d\n", even(numbrs, count));
+output(numbrs, count);
 
 return 0;
 }
