@@ -47,7 +47,7 @@ int even(int numbrs[], int count){
 
 float middle(int numbrs[], int count){
     float mid = 0;
-    mid = (float)sum(numbrs, count) / count;
+    mid = (float)sum(numbrs, count) / (float)count;
     return mid;
 }
 //Вывод//
